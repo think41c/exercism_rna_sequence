@@ -12,7 +12,7 @@ class Complement
   def self.of_rna(sequence)
     sequence.chars do |x|
       if x == "T" 
-        raise ArguementError, "Invalid RNA nucleotide." 
+        raise ArgumentError, "Invalid RNA nucleotide." 
       end
     end
     sequence.tr("CGAU", "GCTA")
