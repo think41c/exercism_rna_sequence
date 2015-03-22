@@ -35,17 +35,14 @@ class ComplementTest < Minitest::Test
   end
 
   def test_dna_complement_of_uracil_is_adenine
-    skip
     assert_equal 'A', Complement.of_rna('U')
   end
 
   def test_dna_complement_of_adenine_is_thymine
-    skip
     assert_equal 'T', Complement.of_rna('A')
   end
 
   def test_dna_complement
-    skip
     assert_equal 'ACTTGGGCTGTAC', Complement.of_rna('UGAACCCGACAUG')
   end
 
