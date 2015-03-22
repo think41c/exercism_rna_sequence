@@ -27,12 +27,10 @@ class ComplementTest < Minitest::Test
   end
 
   def test_dna_complement_of_cytosine_is_guanine
-    skip
     assert_equal 'G', Complement.of_rna('C')
   end
 
   def test_dna_complement_of_guanine_is_cytosine
-    skip
     assert_equal 'C', Complement.of_rna('G')
   end
 
