@@ -1,21 +1,19 @@
 class Complement
   
   def self.of_dna(sequence)
-    sequence.chars do |x|
-      if x == "U"
-        raise ArgumentError, "Invalid DNA necleotide."
-      end
+
+    if sequence.chars.include?("U")
+      raise ArgumentError, "Invalid DNA nucleotide."
     end
     sequence.tr("CGTA", "GCAU")
   end
 
   def self.of_rna(sequence)
-    sequence.chars do |x|
-      if x == "T" 
-        raise ArgumentError, "Invalid RNA nucleotide." 
-      end
+    if sequence.chars.include?("T")
+      raise ArgumentError, "Invalid RNA nucleotide." 
     end
     sequence.tr("CGAU", "GCTA")
   end
 
 end
+
